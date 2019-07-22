@@ -1,5 +1,5 @@
 import unittest
-import net.bobnet as bobnet
+from bob.net import bobnet
 
 
 class BobnetTest(unittest.TestCase):

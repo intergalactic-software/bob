@@ -1,7 +1,7 @@
 import unittest
-from store.Store import Store, JOURNAL_PATH
-from store.Store import MAX_PATH_LENGTH, PUT_METHOD, ADD_METHOD
-import blockchain.blockutil_U as B
+from bob.blockchain import blockutil_U as B
+from bob.store import Store, JOURNAL_PATH
+from bob.store import MAX_PATH_LENGTH, PUT_METHOD, ADD_METHOD
 
 
 class TestStore(unittest.TestCase):

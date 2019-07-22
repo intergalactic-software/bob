@@ -1,11 +1,11 @@
-from sthreads.TCPServer import TCPServer
-from sthreads.AMI import AMI, FORCE_STOPPING
 import unittest
-from store.MockStore import MockStore
 import time
 import socket
-from sthreads.tests.test_AMI import Util, STATE_SEQUENCE
 import logging
+from bob.ami.TCPServer import TCPServer
+from bob.ami.AMI import AMI, FORCE_STOPPING
+from bob.ami.tests.test_AMI import Util, STATE_SEQUENCE
+from bob.store.MockStore import MockStore
 
 logging.basicConfig(level=logging.DEBUG)
 

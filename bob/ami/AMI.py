@@ -1,5 +1,5 @@
 from time import sleep
-from store.Store import Store
+from bob.store.Store import Store
 import logging
 from time import time
 import os
@@ -69,7 +69,7 @@ class AMI(object):
         self.store = store if store else Store()
         self.interval = interval
         self.logger = logging.getLogger(str(self))
-        from sthreads.Hub import Hub
+        from bob.ami.Hub import Hub
         self.hub = Hub(store=self.store) if enable_hub else None
         self.is_thread = is_thread
         self.setState(INIT)

@@ -1,5 +1,5 @@
 import socket
-from sthreads.AMI import AMI, FORCE_STOPPING, RUNNING
+from bob.ami import AMI, FORCE_STOPPING, RUNNING
 import random
 import time
 # if 'sthreads.AMI' not in sys.modules:

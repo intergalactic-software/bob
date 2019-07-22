@@ -1,4 +1,4 @@
-from AMI import AMI, STOPPED
+from bob.ami import AMI, STOPPED
 import time
 
 

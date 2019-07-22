@@ -1,4 +1,4 @@
-import blockchain.blockutil_U as BLK
+import bob.blockchain.blockutil_U as BLK
 
 import socket
 import getpass

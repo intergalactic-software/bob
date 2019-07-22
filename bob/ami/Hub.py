@@ -1,13 +1,13 @@
 import random
-from sthreads.AMI import AMI, FORCE_STOPPING, FAILED
-from sthreads.TCPServer import TCPServer
 from queue import Queue
 import socket
 import logging
-from net.Signals import Signal
 import sys
-import blockchain.blockutil_U as B
-from store.Store import Store, JOURNAL_PATH
+from bob.ami import AMI, FORCE_STOPPING, FAILED
+from bob.ami.TCPServer import TCPServer
+from bob.net.Signals import Signal
+import bob.blockchain.blockutil_U as B
+from bob.store.Store import Store, JOURNAL_PATH
 
 MAX_PEER = 50
 SEPARATOR = "\n\n".encode()

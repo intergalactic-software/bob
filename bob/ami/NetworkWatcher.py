@@ -1,5 +1,5 @@
 import socket
-from sthreads.AMI import AMI
+from bob.ami import AMI
 
 # hosts that accept PING, SSH, HTTPS
 TRUSTED_HOSTS = [

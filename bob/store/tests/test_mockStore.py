@@ -1,8 +1,8 @@
 import unittest
 import tempfile
-from store.Store import Store
-from store.MockStore import MockStore, TYPE, PATH, DATA
 import json
+from bob.store import Store
+from bob.store import MockStore, TYPE, PATH, DATA
 
 
 class TestStore(unittest.TestCase):

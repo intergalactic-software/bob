@@ -1,4 +1,4 @@
-from store.Store import Store
+from bob.store.Store import Store
 import tempfile
 import json
 

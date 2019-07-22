@@ -1,6 +1,6 @@
 import unittest
-from sthreads.AMI import AMI, STOPPED, STARTING, RUNNING, INIT, STOPPING, FORCE_STOPPING, FAILED
-from store.MockStore import MockStore, DATA
+from bob.ami.AMI import AMI, STOPPED, STARTING, RUNNING, INIT, STOPPING, FORCE_STOPPING, FAILED
+from bob.store.MockStore import MockStore, DATA
 import time
 import logging
 import json

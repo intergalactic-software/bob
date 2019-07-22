@@ -1,5 +1,5 @@
 import unittest
-from sthreads.NetworkWatcher import NetworkWatcher
+from bob.ami.NetworkWatcher import NetworkWatcher
 
 
 class TestNetworkWatcher(unittest.TestCase):

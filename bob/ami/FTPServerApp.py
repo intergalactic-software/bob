@@ -3,7 +3,7 @@ import datetime
 import logging
 import socket
 import random
-from sthreads.AMI import AMI, FORCE_STOPPING
+from bob.ami import AMI, FORCE_STOPPING
 
 # Pure-FTPd banner
 BANNER = "" \

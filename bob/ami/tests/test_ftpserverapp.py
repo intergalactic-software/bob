@@ -1,9 +1,10 @@
 import unittest
 import time
-from sthreads.tests.test_AMI import Util, STATE_SEQUENCE
-from sthreads.tests.test_hub import MockSocket
-from store.MockStore import MockStore
-from sthreads.FTPServerApp import FTPServerApp, BANNER
+from bob.ami.tests.test_AMI import Util, STATE_SEQUENCE
+from bob.ami.tests.test_hub import MockSocket
+from bob.ami.FTPServerApp import FTPServerApp, BANNER
+from bob.store.MockStore import MockStore
+
 
 
 class TestFTPServerApp(unittest.TestCase):

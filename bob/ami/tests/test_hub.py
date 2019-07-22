@@ -1,14 +1,14 @@
 import unittest
-from sthreads.Hub import Hub, HubClient, HUB_VERSION, SEPARATOR, INBOUND_PATH, OUBOUND_PATH
-from net.Signals import Signal
-from store.MockStore import MockStore, DATA
-from store.Store import ADD_METHOD
-from sthreads.tests.test_AMI import Util, STATE_SEQUENCE, FAILED_START_SEQUENCE
+from bob.ami.Hub import Hub, HubClient, HUB_VERSION, SEPARATOR, INBOUND_PATH, OUBOUND_PATH
+from bob.net.Signals import Signal
+from bob.store.MockStore import MockStore, DATA
+from bob.store.Store import ADD_METHOD
+from bob.ami.tests.test_AMI import Util, STATE_SEQUENCE, FAILED_START_SEQUENCE
 import socket
 import logging
 import tempfile
 import time
-import blockchain.blockutil_U as B
+import bob.blockchain.blockutil_U as B
 
 logging.basicConfig(level=logging.DEBUG)
 

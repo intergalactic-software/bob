@@ -1,7 +1,7 @@
-from SThread import SThread
+from bob.ami import AMI
 
 
-class Dummy(SThread):
+class Dummy(AMI):
 
     def __init__(self, **args):
         super(Dummy, self).__init__(interval=2, **args)

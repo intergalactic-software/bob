@@ -1,4 +1,4 @@
-import blockchain.blockutil_U as B
+from bob.blockchain import blockutil_U as B
 
 MAX_PATH_LENGTH = 10
 KILL_VALUE = "__KILL__"

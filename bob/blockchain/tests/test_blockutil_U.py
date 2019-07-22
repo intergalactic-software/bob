@@ -1,5 +1,5 @@
 import unittest
-import blockchain.blockutil_U as B
+from bob.blockchain import blockutil_U as B
 
 
 class ADummyClass:

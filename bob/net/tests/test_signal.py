@@ -1,5 +1,5 @@
 import unittest
-from net.Signals import Signal
+from bob.net import Signal
 
 
 class TestSignal(unittest.TestCase):
