@@ -61,7 +61,8 @@ class AMI(object):
     """
 
     def __init__(self, tag=None, store=None, interval=None,
-                 enable_hub=True, is_thread=False, **args):
+                 enable_hub=True, is_thread=False, is_daemon=False,
+                 **args):
         self.TAG = tag or ''
         self.ID = str(hash(time()))[-5:]
         self.TAG += self.ID
@@ -72,7 +73,9 @@ class AMI(object):
         from bob.ami.Hub import Hub
         self.hub = Hub(store=self.store) if enable_hub else None
         self.is_thread = is_thread
+        self.is_daemon = is_daemon
         self.setState(INIT)
+        self._thread = None
 
     def onStart(self):
         pass
@@ -108,8 +111,9 @@ class AMI(object):
 
         if self.is_thread:
             """ Starts this AMI in a thread with shared memory """
-            thread = Thread(target=self.__start)
-            thread.start()
+            self._thread = Thread(target=self.__start, name=self.TAG)
+            self._thread.daemon = self.is_daemon
+            self._thread.start()
         else:
             """ Starts this AMI in a new process and
             returns the unique node_id """

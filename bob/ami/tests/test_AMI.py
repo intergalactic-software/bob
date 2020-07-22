@@ -73,6 +73,14 @@ class TestAMI(unittest.TestCase):
     def test_startStop_single_thread_noHub(self):
         ami = DummyAMI(enable_hub=False, is_thread=True, store=MockStore())
         self.assertEqual(Util.getStates(Util.run(ami)), STATE_SEQUENCE)
+        self.assertFalse(ami._thread.daemon)
+    
+    def test_startStop_single_thread_noHub_daemon(self):
+        ami = DummyAMI(enable_hub=False, is_thread=True, store=MockStore(), 
+                       is_daemon=True)
+        self.assertEqual(Util.getStates(Util.run(ami)), STATE_SEQUENCE)
+        self.assertEqual(ami.TAG, ami._thread.name)
+        self.assertTrue(ami._thread.daemon)
 
     def test_startStop_loop_thread_noHub(self):
         ami = DummyAMI(enable_hub=False, is_thread=True,
